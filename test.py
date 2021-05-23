@@ -73,6 +73,8 @@ def TestIntersect(test):
 
     print("Первое уравнение {0}x + {1}y = {2}".format(line1.a,line1.b,line1.c))
     print("Второе уравнение {0}x + {1}y = {2}".format(line2.a,line2.b,line2.c))
+      print("проверка уравнения 1 {0}x + {1}y = {2}".format(line2.a,line2.b,line2.c))
+          print("проверка уравнения 2 {0}x + {1}y = {2}".format(line2.a,line2.b,line2.c))
     print("Полученный ответ {0}".format(res))
     print("Правильный ответ {0}".format(test['ans']))
 
