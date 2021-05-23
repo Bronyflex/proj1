@@ -29,34 +29,7 @@ fontsmall = ("Arial", 14)
 fontmiddle = ("Arial", 20)
 fontbig = ("Arial", 32)
 
-class App(tk.Tk):
-    def __init__(self):
-        super().__init__()
-        self['bg'] = colapp
-        self.title("Нахождение точки пересечения двух прямых")
-        self.line1 = FrameLine(1)
-        self.line1.pack(pady = middlepad)
 
-        self.line2 = FrameLine(2)
-        self.line2.pack(pady = middlepad)
-
-        self.frame_res = FrameResult()
-        self.frame_res.pack(pady = middlepad)
-
-        self.bind('<Escape>', lambda e: self.quit())
-        self.bind('<Return>', self.getResult)
-
-        self.checkAllEntry()
-
-        self.line1.points.x.bind("<FocusOut>", self.check)
-        self.line1.points.y.bind("<FocusOut>", self.check)
-        self.line1.points.c.bind("<FocusOut>", self.check)
-
-        self.line2.points.x.bind("<FocusOut>", self.check)
-        self.line2.points.y.bind("<FocusOut>", self.check)
-        self.line2.points.c.bind("<FocusOut>", self.check)
-
-        self.frame_res.btn.bind("<Button-1>", self.getResult)
 
     def isValidValueEntry(self, tkentry):
         try:
