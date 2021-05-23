@@ -16,9 +16,7 @@ def solver(a,b,c):
     if D >= 0:
         x1 = (-b + sqrt(D)) / (2*a)
         x2 = (-b - sqrt(D)) / (2*a)
-        check:= if  x1 = (-b + sqrt(D)) / (2*a)
-        x2 = (-b - sqrt(D)) / (2*a) then
-        print("right");
+       
         text = " Дискрименант: %s \n х1: %s \n х2: %s \n" % (D, x1, x2)
     else:
         text = " Дискрименант: %s \n Нет Решения" % D
