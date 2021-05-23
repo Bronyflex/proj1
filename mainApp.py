@@ -6,16 +6,6 @@ import re
 # ClassName.__doc__
 
 
-import IntersectPoint as IPt
-
-smallpad = 4
-middlepad = 8
-bigpad = 20
-
-smallwidth = 5
-middlewidth = 32
-bigwidth = 100
-
 
 
 colapp = "antique white"
